@@ -27,7 +27,6 @@ function Contact() {
 
 
 
-  const date = new Date();
   const allMessages = displayMessage.length > 0 ? displayMessage.map((data, i) => {
 
     return <div className={styles.messageBox}>
@@ -39,6 +38,15 @@ function Contact() {
   
   const handleRetour=()=>{
     router.back();
+  }
+
+  const sendMessage = () => {
+      const newMessage = {
+        text: message,
+        time: new Date()
+      };
+      setDisplayMessage(messages => [...messages, newMessage])
+      setMessage('');
   }
 
 
