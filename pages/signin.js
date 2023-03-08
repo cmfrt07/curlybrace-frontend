@@ -24,7 +24,7 @@ function SignIn() {
   const [ profile, setProfile ] = useState([]);
 
     function handleConnection () {
-        fetch('http://localhost:3000/users/signin', {
+        fetch('https://curlybrace-backend.vercel.app/signin', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

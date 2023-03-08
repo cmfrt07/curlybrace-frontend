@@ -31,7 +31,7 @@ const handleRegister = () => {
     setValidEmail('Veuillez entrer une adresse email valide')
     return;
   }
-    fetch('http://localhost:3000/users/signup', {
+    fetch('https://curlybrace-backend.vercel.app/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: signUpEmail, username: signUpUsername, password: signUpPassword }),
