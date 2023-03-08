@@ -40,22 +40,7 @@ const Geocoding= ()=> {
   });
 }
 
-// const handleProject=()=>{
-    
-//         fetch(`http://localhost:3000/projects/${user.token}`,{
-//         method:'GET',
-//         headers : {'Content-Type': 'application/json'},
-//         body:JSON.stringify({user:user.token,projects:data.projects})
-//     })
-//     .then(response=> response.json())
-//     .then ((data)=>{
-//         console.log(data)
 
-//     })
-
-// };
-
-// Step1: Filtrer le Country
 const filterCountry = city.map((data,i) => {
  return <p>projects.filter()</p>
 });

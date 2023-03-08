@@ -28,7 +28,7 @@ const [userProject, setUserProject] = useState([])
 
 
 useEffect (()=>{
-    fetch(`http://localhost:3000/users/profile/${userData.token}`)
+    fetch(`https://curlybrace-backend.vercel.app/users/profile/${userData.token}`)
     .then(response=> response.json())
     .then(data=>{
         //console.log(data)
@@ -42,7 +42,7 @@ useEffect (()=>{
 
 //USE EFFECT POUR AFFICHER LES PROJETS D'UN UTILISATEUR SUR SON PROFIL
 useEffect (() => {
-    fetch(`http://localhost:3000/projects/find/${userData.token}`)
+    fetch(`https://curlybrace-backend.vercel.app/projects/find/${userData.token}`)
     .then(response => response.json())
     .then(data => {
         setUserProject(data.projects)
@@ -105,7 +105,7 @@ const handleSaveChanges = () => {
         .then((data) => {
             //console.log(data)
 
-            fetch('http://localhost:3000/users/edit', {
+            fetch('https://curlybrace-backend.vercel.app/users/edit', {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -123,7 +123,7 @@ const handleSaveChanges = () => {
         })
 
     }else{
-        fetch('http://localhost:3000/users/edit', {
+        fetch('https://curlybrace-backend.vercel.app/users/edit', {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

@@ -13,7 +13,7 @@ function Project() {
   const dispatch = useDispatch()
   const router = useRouter();
   const projectId = useSelector((state)=> state.projectId.value.id);
-  console.log("Project ID:", projectId);
+
   const [projectData, setProjectData] = useState({})
   const [defaultBanner, setDefaultBanner] = useState('https://www.zupimages.net/up/23/09/c5su.jpg')
   const [myTags, setMyTags] = useState([])
@@ -28,7 +28,7 @@ function Project() {
 
 
   useEffect (() => {
-    fetch(`http://localhost:3000/projects/project/${projectId}`)
+    fetch(`https://curlybrace-backend.vercel.app/projects/project/${projectId}`)
     .then(response => response.json())
     .then(data => {
         setProjectData(data.project)
@@ -39,7 +39,7 @@ function Project() {
 
 //Find owner project
 useEffect (()=>{
-  fetch(`http://localhost:3000/users/profile/${projectOwner}`)
+  fetch(`https://curlybrace-backend.vercel.app/users/profile/${projectOwner}`)
   .then(response=> response.json())
   .then(data=>{
     setUserProject(data.profile.username)

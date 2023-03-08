@@ -105,7 +105,7 @@ function Mesh() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/projects')
+    fetch('https://curlybrace-backend-git-main-cmfrt07.vercel.app/projects')
     .then(response=> response.json())
     .then(data=>{
       setAllMyDots(data.projects)

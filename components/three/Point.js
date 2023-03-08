@@ -41,7 +41,7 @@ const Point = ({ lat, lon, title, shortDesc, projectId }) => {
 
 
   useEffect (() => {
-    fetch(`http://localhost:3000/projects/project/${projectId}`)
+    fetch(`https://curlybrace-backend.vercel.app/projects/project/${projectId}`)
     .then(response => response.json())
     .then(data => {
       setUserToken(data.project.user)
@@ -51,7 +51,7 @@ const Point = ({ lat, lon, title, shortDesc, projectId }) => {
 
 
 useEffect (()=>{
-  fetch(`http://localhost:3000/users/profile/${userToken}`)
+  fetch(`https://curlybrace-backend.vercel.app/users/profile/${userToken}`)
   .then(response=> response.json())
   .then(data=>{
     setProjectAvatar(data.profile.avatar)

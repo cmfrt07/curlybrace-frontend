@@ -175,7 +175,7 @@ const cloudName = 'dyjxi1isx'
       })
       .then((response) => response.json())
       .then((data) => {
-        fetch('http://localhost:3000/projects/create', {
+        fetch('https://curlybrace-backend.vercel.app/projects/create', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -224,7 +224,7 @@ const cloudName = 'dyjxi1isx'
           });
       })
     }else{
-      fetch('http://localhost:3000/projects/create', {
+      fetch('https://curlybrace-backend.vercel.app/projects/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

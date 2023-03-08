@@ -143,7 +143,7 @@ const handleSubmit = () => {
     queryParams = queryParams.slice(0, -1);
   }
 
-  const url = `http://localhost:3000/projects/search?${queryParams}`;
+  const url = `https://curlybrace-backend-git-main-cmfrt07.vercel.app/projects/search?${queryParams}`;
 
   console.log(url, "cam ton url est la");
 
