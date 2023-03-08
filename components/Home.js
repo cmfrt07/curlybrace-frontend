@@ -49,7 +49,7 @@ function Home() {
         <FontAwesomeIcon style={{color: "white", fontSize: "22px", margin: 0}} icon={faPlus}/>
         </div>
         <Modal
-          visible={isOpen}
+          open={isOpen}
           onCancel={() => setIsOpen(false)}
           title="Welcome to {CurlyBrace}"
           footer={modalFooter}

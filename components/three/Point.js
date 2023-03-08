@@ -7,8 +7,6 @@ import { Html } from "@react-three/drei"
 import Image from 'next/image';
 
 
-
-
 const Point = ({ lat, lon, title, shortDesc, projectId }) => {
   const meshRef = React.useRef();
   const dispatch = useDispatch();
@@ -46,15 +44,17 @@ const Point = ({ lat, lon, title, shortDesc, projectId }) => {
       setUserToken(data.project.user)
     })
     
-},[hovered])
+},[])
 
 
 useEffect (()=>{
-  fetch(`https://curlybrace-backend.vercel.app/users/profile/${userToken}`)
-  .then(response=> response.json())
-  .then(data=>{
-    setProjectAvatar(data.profile.avatar)
-  });
+  if (userToken) {
+    fetch(`https://curlybrace-backend.vercel.app/users/profile/${userToken}`)
+    .then(response=> response.json())
+    .then(data=>{
+      setProjectAvatar(data.profile.avatar)
+    });
+  }
 },[hovered]);
 
 
@@ -99,8 +99,8 @@ useEffect (()=>{
             </div>
           } 
           trigger="click" 
-          visible={visible} 
-          onVisibleChange={handleClose}
+          open={visible} 
+          onOpenChange={handleClose}
           />
         </Html>
       )}

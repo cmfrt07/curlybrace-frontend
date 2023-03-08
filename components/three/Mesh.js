@@ -139,7 +139,7 @@ mapOnThis = searchedProject.project;
       >
       {/*<Point lat={48} lon={ 2} title={"test"} shortDesc={"hello, this is a test"}/>*/}
       {projects}
-      <sphereBufferGeometry args={[1.7, 32, 32]}/>
+      <sphereGeometry args={[1.7, 32, 32]}/>
       <meshStandardMaterial map={base} />
       <Halo />
     

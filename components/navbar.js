@@ -16,10 +16,10 @@ const router = useRouter();
 const [isMenuClicked, setIsMenuClicked] = useState(false)
 
 const [menuStyle, setMenuStyle] = useState({
-  "border-left": "solid 1px #30363d",
+  "borderLeft": "solid 1px #30363d",
   "width": "45%",
   "height": "92vh",
-  "background-color": "#161b22",
+  "backgroundColor": "#161b22",
   "position": "absolute",
   "bottom": 0,
   "right": 0,
@@ -30,7 +30,7 @@ const [menuStyle, setMenuStyle] = useState({
 const updateMenu = () =>{
   if(!isMenuClicked){
     setMenuStyle({
-      "border-left": "solid 1px #30363d",
+      "borderLeft": "solid 1px #30363d",
       "width": "45%",
       "height": "92vh",
       "backgroundColor": "#161b22",
@@ -43,7 +43,7 @@ const updateMenu = () =>{
   }
   else{
     setMenuStyle({
-      "border-left": "solid 1px #30363d",
+      "borderLeft": "solid 1px #30363d",
       "width": "45%",
       "height": "92vh",
       "backgroundColor": "#161b22",

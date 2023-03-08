@@ -11,7 +11,7 @@ function Halo() {
 
   return (
     <mesh ref={haloRef}>
-      <sphereBufferGeometry args={[2.2, 32, 32]} />
+      <sphereGeometry args={[2.2, 32, 32]} />
       <meshBasicMaterial color={new THREE.Color(0xffffff)} transparent opacity={0.08} blending={THREE.AdditiveBlending} />
     </mesh>
   );

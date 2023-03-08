@@ -38,13 +38,15 @@ function Project() {
 
 //Find owner project
 useEffect (()=>{
-  fetch(`https://curlybrace-backend.vercel.app/users/profile/${projectOwner}`)
-  .then(response=> response.json())
-  .then(data=>{
-    setUserProject(data.profile.username)
-    setProjectOwnerAvatar(data.profile.avatar)
-    setProjectOwnerToken(data.profile.token)
-  });
+  if(projectOwner){
+    fetch(`https://curlybrace-backend.vercel.app/users/profile/${projectOwner}`)
+    .then(response=> response.json())
+    .then(data=>{
+      setUserProject(data.profile.username)
+      setProjectOwnerAvatar(data.profile.avatar)
+      setProjectOwnerToken(data.profile.token)
+    });
+  }
 },[projectOwner]);
 
 
