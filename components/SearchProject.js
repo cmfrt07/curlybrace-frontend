@@ -137,7 +137,7 @@ const handleSubmit = () => {
     queryParams = queryParams.slice(0, -1);
   }
 
-  const url = `https://curlybrace-backend-git-main-cmfrt07.vercel.app/projects/search?${queryParams}`;
+  const url = `https://curlybrace-backend.vercel.app/projects/search?${queryParams}`;
 
   fetch(url)
     .then((response) => response.json())

@@ -10,7 +10,7 @@ const userData = useSelector((state)=> state.user.value);
 let displayLogged = 
 <>
   <Navbar/>
-  <div style={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#0d1117", height: "91.7vh"}}>
+  <div style={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#0d1117", height: "92vh"}}>
       <p>You should SignIn or SignUp to contact someone</p>
   </div>
 </>
