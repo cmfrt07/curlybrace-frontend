@@ -1,60 +1,92 @@
 import styles from '../styles/Navbar.module.css';
-import React, {useState} from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Select from 'react-select'
-import makeAnimated from 'react-select/animated';
+import React, {useState, useEffect} from "react";
 import { useRouter } from "next/router";
 import SearchProject from './SearchProject';
-import { Html } from "@react-three/drei"
+
 
 function Navbar() {
 
+  const defaultWidth = "45%";
 
-const router = useRouter();
-//To change burger classes
+  const router = useRouter();
+  const [isMenuClicked, setIsMenuClicked] = useState(false)
+  const [menuStyle, setMenuStyle] = useState({
+    "borderLeft": "solid 1px #30363d",
+    "width": defaultWidth,
+    "height": "92vh",
+    "backgroundColor": "#161b22",
+    "position": "absolute",
+    "bottom": 0,
+    "right": 0,
+    "zIndex": 1,
+    "display": "none"
+  })
 
-const [isMenuClicked, setIsMenuClicked] = useState(false)
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setMenuStyle({
+          "borderLeft": "solid 1px #30363d",
+          "width": "65%",
+          "height": "92vh",
+          "backgroundColor": "#161b22",
+          "position": "absolute",
+          "bottom": 0,
+          "right": 0,
+          "zIndex": 1,
+          "display": "none"
+        })
+      } else {
+        setMenuStyle({
+          "borderLeft": "solid 1px #30363d",
+          "width": defaultWidth,
+          "height": "92vh",
+          "backgroundColor": "#161b22",
+          "position": "absolute",
+          "bottom": 0,
+          "right": 0,
+          "zIndex": 1,
+          "display": "none"
+        })
+      }
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
 
-const [menuStyle, setMenuStyle] = useState({
-  "borderLeft": "solid 1px #30363d",
-  "width": "45%",
-  "height": "92vh",
-  "backgroundColor": "#161b22",
-  "position": "absolute",
-  "bottom": 0,
-  "right": 0,
-  "zIndex": 1,
-  "display": "none"})
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
-//Toggle burger menu change
-const updateMenu = () =>{
-  if(!isMenuClicked){
-    setMenuStyle({
-      "borderLeft": "solid 1px #30363d",
-      "width": "45%",
-      "height": "92vh",
-      "backgroundColor": "#161b22",
-      "position": "absolute",
-      "bottom": 0,
-      "right": 0,
-      "zIndex": 1,
-      "display": "flex"})
-    setIsMenuClicked(true)
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setMenuStyle({
+        "borderLeft": "solid 1px #30363d",
+        "width": window.innerWidth < 768 ? "65%" : defaultWidth,
+        "height": "92vh",
+        "backgroundColor": "#161b22",
+        "position": "absolute",
+        "bottom": 0,
+        "right": 0,
+        "zIndex": 1,
+        "display": "flex"
+      })
+      setIsMenuClicked(true)
+    } else {
+      setMenuStyle({
+        "borderLeft": "solid 1px #30363d",
+        "width": window.innerWidth < 768 ? "65%" : defaultWidth,
+        "height": "92vh",
+        "backgroundColor": "#161b22",
+        "position": "absolute",
+        "bottom": 0,
+        "right": 0,
+        "zIndex": 1,
+        "display": "none"
+      })
+      setIsMenuClicked(false)
+    }
   }
-  else{
-    setMenuStyle({
-      "borderLeft": "solid 1px #30363d",
-      "width": "45%",
-      "height": "92vh",
-      "backgroundColor": "#161b22",
-      "position": "absolute",
-      "bottom": 0,
-      "right": 0,
-      "zIndex": 1,
-      "display": "none"})
-    setIsMenuClicked(false)
-  }
-}
 
 /*+-+-+-+-+-+-+ signin/signup pages +-+-+-+-+-+-+*/
 
@@ -84,9 +116,6 @@ const handleHome = () => {
       <div style={menuStyle}>
 
       <SearchProject />
-
-
-
       </div>
     </div>
   );

@@ -45,6 +45,7 @@
 }
 
 .menuContent{
+  overflow-y: auto;
   margin: 0;
   display: flex;
   flex: 1;
@@ -176,6 +177,16 @@
 
 
 @media only screen and (max-width: 768px){
+  .menuContent{
+    margin: 0;
+    display: flex;
+    flex: 1;
+    height: 92vh;
+    padding: 120px 0 0 0;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
   .menuContent input{
     width: 80%;
   }

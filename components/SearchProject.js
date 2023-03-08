@@ -255,7 +255,8 @@ styles={{
     ':hover': {
       backgroundColor: '#30363d',
       color: '#fff'
-    }
+    },
+
   })
 }}/>
 </div>
