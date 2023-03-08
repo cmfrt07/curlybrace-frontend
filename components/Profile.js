@@ -19,7 +19,7 @@ const router = useRouter();
 
 const [username, setUsername] = useState('')
 const [description, setDescription] = useState('')
-const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/09/mebb.jpg')
+const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
 const [isEditing,setIsEditing] = useState(false)
 
 const [avatarFile, setAvatarFile] = useState(null);

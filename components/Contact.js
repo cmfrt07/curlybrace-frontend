@@ -10,7 +10,7 @@ function Contact() {
   const [message, setMessage] = useState('')
   const [displayMessage, setDisplayMessage] = useState([])
   const [username, setUsername] = useState('')
-  const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/09/mebb.jpg')
+  const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
   
 
   useEffect(() => {
