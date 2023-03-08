@@ -18,7 +18,7 @@ function Project() {
   const [defaultBanner, setDefaultBanner] = useState('https://www.zupimages.net/up/23/09/c5su.jpg')
   const [myTags, setMyTags] = useState([])
   const [projectOwner, setProjectOwner] = useState('')
-  const [projectOwnerAvatar, setProjectOwnerAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
+  const [projectOwnerAvatar, setProjectOwnerAvatar] = useState('')
   const [projectOwnerToken, setProjectOwnerToken] = useState('token')
 
   const [userProject, setUserProject] = useState('user')
@@ -92,6 +92,7 @@ const viewProfile = () => {
   router.push("/projectprofile")
 }
 
+const avatar = projectOwnerAvatar ? <Image className={styles.titleBox_image} src={projectOwnerAvatar} alt="avatar" width={50} height={50} style={{borderRadius: "25px"}}/> : null;
 
   return (
     <>
@@ -102,7 +103,7 @@ const viewProfile = () => {
         <div className={styles.userOfProject} style={{backgroundImage: `url(${defaultBanner})`, borderRadius: "6px"}}>
           <div className={styles.userOfProjectSection}>
           <div style={{borderRadius: "25px", boxShadow: "1px 1px 3px #30363d"}}>
-          <Image className={styles.titleBox_image} src={projectOwnerAvatar} alt="avatar" width={50} height={50} style={{borderRadius: "25px"}}/>
+          {avatar}
           </div>
 
             <p>{userProject}</p>

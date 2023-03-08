@@ -17,7 +17,7 @@ const Point = ({ lat, lon, title, shortDesc, projectId }) => {
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false)
   const [userToken, setUserToken] = useState('')
-  const [projectAvatar, setProjectAvatar] = useState('https://www.zupimages.net/up/23/09/mebb.jpg')
+  const [projectAvatar, setProjectAvatar] = useState('')
 
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Point = ({ lat, lon, title, shortDesc, projectId }) => {
 
   
   const projectTitle = title;
-  const avatar = <Image src={projectAvatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50px"}}/>;
+  const avatar = projectAvatar ? <Image src={projectAvatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50px"}}/> : null;
   const content = shortDesc;
   const popButton = <Button onClick={() => console.log("hello")} >View project</Button>
 

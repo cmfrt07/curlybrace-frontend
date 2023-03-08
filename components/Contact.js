@@ -11,7 +11,7 @@ function Contact() {
   const [message, setMessage] = useState('')
   const [displayMessage, setDisplayMessage] = useState([])
   const [username, setUsername] = useState('')
-  const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
+  const [avatar, setAvatar] = useState('')
 
   const profile = useSelector((state)=> state.profileIdSender.value);
   console.log(profile.token)
@@ -43,13 +43,16 @@ function Contact() {
     router.back();
   }
 
+
+  const avatarImage = avatar ? <Image src={avatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50%"}}/> : null;
+
   return (
     <>
     <Navbar/>
     <main className={styles.main}>
     <div className={styles.userBox}>
     <div className={styles.contacted}>
-      <Image src={avatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50%"}}/>
+      {avatarImage}
       <p>{username}</p>
     </div>
       <button onClick={()=> handleRetour()}>Go Back</button>

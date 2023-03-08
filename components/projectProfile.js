@@ -21,7 +21,7 @@ const profile = useSelector((state)=> state.profileIdSender.value);
 
 const [username, setUsername] = useState('')
 const [description, setDescription] = useState('')
-const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
+const [avatar, setAvatar] = useState('')
 const [isEditing,setIsEditing] = useState(false)
 
 const [avatarFile, setAvatarFile] = useState(null);
@@ -140,9 +140,10 @@ const handleSaveChanges = () => {
 };
 
 const handleContact = () => {
-    router.push(`/contact`)
+    router.push("/contact")
 }
 
+const avatarImage = avatar ? <Image src={avatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50px"}}/> : null;
 
     return(
         <>
@@ -151,7 +152,7 @@ const handleContact = () => {
         <div className={styles.userSection}>
 
         <div className={styles.user}>
-            <Image src={avatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50px"}}/>
+            {avatarImage}
             <h2>{username}</h2>
         </div>
             <button onClick={() => handleContact()} >Contact</button>
