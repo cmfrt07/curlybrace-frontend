@@ -1,0 +1,128 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0d1117;
+  align-items: center;
+  width: 100vw;
+  height: 92vh;
+  padding: 0 5%;
+}
+
+.inputContainer {
+  background-color: #161b22;
+  padding: 20px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+}
+
+.title {
+  width: 100%;
+  min-height: 2rem;
+}
+
+.shortDescription {
+  width: 100%;
+  min-height: 2rem;
+}
+
+.description {
+  resize: none;
+  width: 100%;
+  min-height: 10rem;
+  overflow-y: scroll;
+}
+
+.createBtn{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formHeader{
+  text-align: center;
+}
+
+.checkBoxes{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.required{
+  color: red;
+  margin: 0;
+}
+
+
+.inputContainer  input{
+  color: white;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  outline: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.inputContainer  textarea{
+  color: white;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  outline: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.inputContainer  input:focus{
+  outline: none;
+}
+
+.inputContainer  textarea:focus{
+  outline: none;
+}
+
+.formContainer button{
+  background-color: #161b22;
+  border: #30363d 1px solid;
+  box-shadow: 1px 1px 5px #30363d;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.formContainer button:hover{
+  background-color: #161b22;
+  border: #30363d 1px solid;
+  box-shadow: 1px 1px 10px #30363d;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.formContainer label{
+  color: white
+}

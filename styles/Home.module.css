@@ -1,0 +1,21 @@
+.main{
+  margin: 0;
+  background-color: #30363d;
+  overflow-x: hidden;
+}
+
+.popup {
+  border: 1px solid #30363d;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: #161b22;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

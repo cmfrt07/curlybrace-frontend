@@ -1,0 +1,172 @@
+.main {
+  flex: 1;
+  height: 92vh;
+  justify-content: center;
+  align-items: baseline;
+  padding: 50px 15% 0 15%;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user h2 {
+  margin-left: 20px;
+}
+
+.userSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+  background: #161b22;
+  height: 70px;
+  margin-bottom: 20px;
+  border: 1px solid #30363d;
+}
+
+.usernameInput {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-left: 20px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  height: 50px;
+  color: #c9d1d9;
+}
+
+.description {
+  overflow: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  height: 100px;
+  padding-left: 20px;
+}
+
+.descriptionEdited {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  height: 100px;
+}
+
+.descriptionEdited textarea {
+  resize: none;
+  border: none;
+  padding-left: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  height: 70px;
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+  color: #c9d1d9;
+}
+
+.description p {
+  margin: 0;
+  color: #c9d1d9;
+}
+
+.btnRetour {
+  text-align: center;
+}
+
+.contentProjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectsContainer {
+  padding: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px 0;
+  background-color: #161b22;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  height: 50vh;
+  width: 80vw;
+}
+
+.projectBox {
+  overflow-y: auto;
+  background-color: #0d1117;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  height: 100%;
+  width: 68vw;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #c9d1d9;
+}
+
+
+.titleBox_title{
+  margin: 5px;
+  top: 0;
+}
+
+.main button{
+  background-color: #161b22;
+  border: #30363d 1px solid;
+  box-shadow: 1px 1px 5px #30363d;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.main button:hover{
+  transition: 0.5;
+  background-color: #161b22;
+  border: #30363d 1px solid;
+  box-shadow: 1px 1px 10px #30363d;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.main input:focus{
+  outline: none;
+}
+
+.main textarea:focus{
+  outline: none;
+}

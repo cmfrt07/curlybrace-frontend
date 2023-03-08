@@ -1,0 +1,114 @@
+.main {
+  padding: 50px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  width: 100%;
+  height: 92vh;
+  
+}
+
+.headerContent {
+  border-radius: 6px;
+  width: 100%;
+  background-color: #161b22;
+  padding: 16px;
+}
+
+.headerContentText {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.headerContentImage {
+  position: relative;
+  border-radius: 6px;
+}
+
+.tags {
+  display: flex;
+  margin: 16px 0;
+}
+
+.tag {
+  background-color: #30363d;
+  margin: 0 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tag p {
+  margin: 0;
+  color: #c9d1d9;
+}
+
+.descriptionContainer {
+  overflow: auto;
+  display: flex;
+  padding: 16px;
+  margin: 32px 0;
+  border-radius: 6px;
+  height: 100%;
+  max-height: 40vh;
+  width: 100%;
+  background-color: #161b22;
+  color: #c9d1d9;
+}
+
+.buttonBack{
+display: flex;
+justify-content: center;
+}
+
+.main button{
+  background-color: #161b22;
+  border: #30363d 1px solid;
+  box-shadow: 1px 1px 5px #30363d;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.main button:hover{
+  transition: 0.5;
+  background-color: #161b22;
+  border: #30363d 1px solid;
+  box-shadow: 1px 1px 10px #30363d;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.userOfProject{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userOfProjectSection{
+margin: 10px;
+border-radius: 6px;
+background-color: #30363d;
+padding: 10px;
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+
+.userOfProjectSection p{
+  color: white;
+  font-weight: bold;
+  }
+
+.userOfProjectSection p{
+  margin: 5px;
+  }
+
