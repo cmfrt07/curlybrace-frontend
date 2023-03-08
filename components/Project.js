@@ -15,7 +15,7 @@ function Project() {
   const projectId = useSelector((state)=> state.projectId.value.id);
 
   const [projectData, setProjectData] = useState({})
-  const [defaultBanner, setDefaultBanner] = useState('https://www.zupimages.net/up/23/09/c5su.jpg')
+  const [defaultBanner, setDefaultBanner] = useState('https://www.zupimages.net/up/23/10/c235.png')
   const [myTags, setMyTags] = useState([])
   const [projectOwner, setProjectOwner] = useState('')
   const [projectOwnerAvatar, setProjectOwnerAvatar] = useState('')
