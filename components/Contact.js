@@ -14,14 +14,12 @@ function Contact() {
   const [avatar, setAvatar] = useState('')
 
   const profile = useSelector((state)=> state.profileIdSender.value);
-  console.log(profile.token)
   
 
   useEffect (()=>{
     fetch(`https://curlybrace-backend.vercel.app/users/profile/${profile.token}`)
     .then(response=> response.json())
     .then(data=>{
-        //console.log(data)
         setUsername(data.profile.username)
         setAvatar(data.profile.avatar)
     });

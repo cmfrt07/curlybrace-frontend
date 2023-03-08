@@ -24,7 +24,6 @@ function Project() {
   const [userProject, setUserProject] = useState('user')
 
 
-  console.log('this is project owner', userProject)
 
 
   useEffect (() => {

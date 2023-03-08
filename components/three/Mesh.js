@@ -10,8 +10,6 @@ import Halo from './Halo';
 function Mesh() {
   const myMesh = useRef();
   const searchedProject = useSelector((state) => state.search.value)
-  console.log(searchedProject.project, "ici ici ici regarde ici")
-  console.log(searchedProject.isSearching)
 
   const [dragging, setDragging] = useState(false);
   const [previousMousePosition, setPreviousMousePosition] = useState({ x: 0, y: 0 });

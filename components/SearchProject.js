@@ -98,12 +98,6 @@ const levelOptions = [
 ];
 
 
-
-
-//if (level.value === 'beginner'){console.log("test")}
-//console.log(level)
-//if(title !== ''){console.log("hi cam")}
-
 const handleSubmit = () => {
   let queryParams = '';
   if (art) queryParams += 'art=true&';
@@ -145,12 +139,9 @@ const handleSubmit = () => {
 
   const url = `https://curlybrace-backend-git-main-cmfrt07.vercel.app/projects/search?${queryParams}`;
 
-  console.log(url, "cam ton url est la");
-
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      //console.log(data, "i found this data");
       setResult(data.projects.length)
       dispatch(setSearched({project: data.projects}))
     });

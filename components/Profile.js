@@ -31,7 +31,6 @@ useEffect (()=>{
     fetch(`https://curlybrace-backend.vercel.app/users/profile/${userData.token}`)
     .then(response=> response.json())
     .then(data=>{
-        //console.log(data)
         setUsername(data.profile.username)
         setDescription(data.profile.description)
         setAvatar(data.profile.avatar)
@@ -49,7 +48,6 @@ useEffect (() => {
     })
 },[])
 
-console.log(userProject, "test")
 
 const viewProject = (id) => {
     dispatch(
@@ -103,7 +101,6 @@ const handleSaveChanges = () => {
         })
         .then((response) => response.json())
         .then((data) => {
-            //console.log(data)
 
             fetch('https://curlybrace-backend.vercel.app/users/edit', {
                 method: "PUT",

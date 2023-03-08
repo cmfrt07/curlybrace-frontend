@@ -37,7 +37,6 @@ const Point = ({ lat, lon, title, shortDesc, projectId }) => {
   const projectTitle = title;
   const avatar = projectAvatar ? <Image src={projectAvatar} alt="Avatar" width={50} height={50} style={{borderRadius: "50px"}}/> : null;
   const content = shortDesc;
-  const popButton = <Button onClick={() => console.log("hello")} >View project</Button>
 
 
   useEffect (() => {
@@ -68,7 +67,6 @@ useEffect (()=>{
   };
 
   const viewFullProject = () => {
-    console.log(projectId)
     dispatch(
       transferId({
         id: projectId
