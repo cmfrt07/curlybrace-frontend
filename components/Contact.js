@@ -2,6 +2,7 @@ import styles from '../styles/Contact.module.css';
 import { useState, useEffect } from 'react';
 import Navbar from './navbar';
 import { useRouter } from "next/router";
+import { useSelector } from 'react-redux';
 import Image from 'next/image';
 
 
@@ -11,21 +12,22 @@ function Contact() {
   const [displayMessage, setDisplayMessage] = useState([])
   const [username, setUsername] = useState('')
   const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
+
+  const profile = useSelector((state)=> state.profileIdSender.value);
+  console.log(profile.token)
   
 
-  useEffect(() => {
-    setUsername(router.query.username)
-    setAvatar(router.query.avatar)
-  }, [])
+  useEffect (()=>{
+    fetch(`https://curlybrace-backend.vercel.app/users/profile/${profile.token}`)
+    .then(response=> response.json())
+    .then(data=>{
+        //console.log(data)
+        setUsername(data.profile.username)
+        setAvatar(data.profile.avatar)
+    });
+},[avatar]);
 
-  const sendMessage = () => {
-    const newMessage = {
-      text: message,
-      time: new Date()
-    };
-    setDisplayMessage(mess => [...mess, newMessage])
-    setMessage('')
-  }
+
 
   const date = new Date();
   const allMessages = displayMessage.length > 0 ? displayMessage.map((data, i) => {

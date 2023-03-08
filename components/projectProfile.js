@@ -19,9 +19,6 @@ const router = useRouter();
 const profile = useSelector((state)=> state.profileIdSender.value);
 
 
-
-
-
 const [username, setUsername] = useState('')
 const [description, setDescription] = useState('')
 const [avatar, setAvatar] = useState('https://www.zupimages.net/up/23/10/c235.png')
@@ -143,7 +140,7 @@ const handleSaveChanges = () => {
 };
 
 const handleContact = () => {
-    router.push(`/contact?username=${username}&avatar=${avatar}`)
+    router.push(`/contact`)
 }
 
 
