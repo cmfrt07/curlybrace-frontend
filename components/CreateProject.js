@@ -275,21 +275,6 @@ const cloudName = 'dyjxi1isx'
     }
   }
 
-  /* GEOLOCALISATION */ //!\\ intégrer au reste
-
-// ATTENTION DONNEES SENSIBLES
-const PS_API_KEY='e8de5d6de1ea51d725f1ab0702b84b6c';
-
-const handleLocation = () => {
-  fetch(`http://api.positionstack.com/v1/forward?access_key=${PS_API_KEY}&query=${locationName}&limit=1`)
-  .then((response) => response.json())
-  .then(data => {
-    setLocationName(data.data[0].name);
-    setLat(data.data[0].latitude);
-    setLon(data.data[0].longitude);
-    setCountry(data.data[0].country);
-  });
-};
 
 
 let toDisplay = 
