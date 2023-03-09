@@ -68,7 +68,7 @@ function Home() {
         <Modal
           open={isOpen}
           onCancel={() => setIsOpen(false)}
-          title="Welcome to {CurlyBrace}"
+          title="Welcome to {Curlybrace}"
           footer={modalFooter}
           maskStyle={{
             backgroundColor: 'transparent'

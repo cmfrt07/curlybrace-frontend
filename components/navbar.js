@@ -124,7 +124,7 @@ useEffect(() => {
     <div className={styles.main} >
       <nav className={styles.navbar}>
       <div className={styles.logoContainer} onClick={() => handleHome()}>
-        <h1>&#123; CurlyBrace &#125;</h1>
+        <h1>&#123; Curlybrace &#125;</h1>
         <p>Explore the world to find projects</p>
       </div>
         <div className={styles.burgerMenu} onClick={updateMenu}>
