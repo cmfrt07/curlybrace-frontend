@@ -28,7 +28,7 @@ const handleRegister = () => {
   if (!emailPattern.test(signUpEmail)) {
     // Si l'email n'est pas valide, affichez une erreur ou empêchez l'envoi de la demande POST
     console.log('Adresse e-mail invalide');
-    setValidEmail('Veuillez entrer une adresse email valide')
+    setValidEmail('Please enter a valid email address')
     return;
   }
     fetch('https://curlybrace-backend.vercel.app/users/signup', {
@@ -97,7 +97,7 @@ const logOut = () => {
           {/*<button onClick={() => login()}>Sign up with Google 🚀 </button>*/}
           <h3>Email</h3>
           <input type="text" placeholder="Email" id="signUpEmail" onChange={(e) => setSignUpEmail(e.target.value)} value={signUpEmail} />
-          {validEmail}
+          <p style={{color: "red", fontWeight: "bold"}}>{validEmail}</p> 
           <h3>Username</h3>
           <input type="text" placeholder="Username" id="signUpUsername" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername} />
           <h3>Password</h3>

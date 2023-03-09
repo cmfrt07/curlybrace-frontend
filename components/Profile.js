@@ -68,7 +68,7 @@ const projectsOfUser = userProject.length > 0 ? userProject.map((data, i) => {
             <button onClick={() => viewProject(data._id)} style={{marginTop: "40px"}}>ViewProject</button>
         </div>
     </div>;
-}) : null;
+}) : <p>This user has not yet created any projects</p>;
 
 
 
