@@ -18,7 +18,21 @@ function Location(){
 
 
 const handleSearch= ()=> {
-    fetch(`http://api.positionstack.com/v1/forward?access_key=2d8531b40e3247ef4cefc88994fd86e0&query=${locationName}&limit=1`)
+
+  fetch(`https://curlybrace-backend.vercel.app/users/location/${locationName}`)
+  .then(response=> response.json())
+  .then(data=>{
+    console.log(data)
+    setCurrentLocation(data.name)
+      dispatch(newLocation({
+        lat: data.latitude,
+        lon: data.longitude,
+        country: data.country,
+        name: data.name,
+      }))
+  });
+/*
+    fetch(`http://api.positionstack.com/v1/forward?access_key=${API_key}&query=${locationName}&limit=1`)
     .then(response=> response.json())
     .then(data=>{
       setCurrentLocation(data.data[0].name)
@@ -28,11 +42,9 @@ const handleSearch= ()=> {
         country: data.data[0].country,
         name: data.data[0].name,
       }))
-        //setLatitude(data.data[0].latitude);
-        //setLongitude(data.data[0].longitude);
-        //setCountry(data.data[0].country);
-  });
 
+  });
+*/
 }
 
 return(
