@@ -157,7 +157,7 @@ const handleSubmit = () => {
 
 let displayResult = <p></p>;
 if(resultLength > 0){
-  displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>Result: {resultLength}</p>;
+  displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>🚀 Result: {resultLength}</p>;
 }
 
 const handleClear = () => {

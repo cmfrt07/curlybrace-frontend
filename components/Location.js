@@ -22,7 +22,7 @@ const handleSearch= ()=> {
   .then(response=> response.json())
   .then(data=>{
     console.log(data)
-    setCurrentLocation(data.name)
+    setCurrentLocation("✅ " + data.name)
       dispatch(newLocation({
         lat: data.latitude,
         lon: data.longitude,
