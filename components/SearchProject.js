@@ -7,12 +7,16 @@ import { useRouter } from "next/router";
 import { logout } from '../reducers/user';
 import { setSearched } from '../reducers/search';
 import { resetSearch } from '../reducers/search';
+import { setLength } from '../reducers/search';
+import { clearLength } from '../reducers/search';
 
 function SearchProject() {
   const dispatch = useDispatch();
   const router = useRouter();
   const userToken = useSelector((state) => state.user.value.token);
-  const userData = useSelector((state) => state.user.value)
+  const userData = useSelector((state) => state.user.value);
+  const resultLength = useSelector((state) => state.search.value.length);
+
 
   const [locationName, setLocationName] = useState('');
   const [lat, setLat] = useState(0);
@@ -144,17 +148,21 @@ const handleSubmit = () => {
     .then((data) => {
       setResult(data.projects.length)
       dispatch(setSearched({project: data.projects}))
+      dispatch(setLength({length: data.projects.length}))
+      router.push("/");
     });
 };
 
 
+
 let displayResult = <p></p>;
-if(result !== null){
-  displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>Result: {result}</p>;
+if(resultLength > 0){
+  displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>Result: {resultLength}</p>;
 }
 
 const handleClear = () => {
   dispatch(resetSearch())
+  dispatch(clearLength())
   setResult(null)
   setLocationName('')
   setTitle('')

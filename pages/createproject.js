@@ -9,7 +9,7 @@ export default function CreateProjectPage() {
   let displayLogged = 
   <>
     <Navbar/>
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#0d1117", height: "91.7vh"}}>
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#0d1117", height: "92vh"}}>
         <p>You should Sign In or Sign Up to see create a project</p>
     </div>
   </>

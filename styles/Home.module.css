@@ -19,3 +19,13 @@
   align-items: center;
 }
 
+.result{
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

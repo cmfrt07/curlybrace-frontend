@@ -6,9 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react';
 import { Modal } from 'antd';
+import { useSelector } from 'react-redux';
+
 
 
 function Home() {
+
+  const resultLength = useSelector((state) => state.search.value.length);
 
   const [rotation, setRotation] = useState(0);
   const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +34,13 @@ function Home() {
   const modalFooter = [
     <p></p>
   ];
+
+  let displayResult = <p></p>
+  if(resultLength > 0){
+    displayResult= <div className={styles.result}>
+    <p>Result: {resultLength}</p>
+    </div>
+  }
 
   return (
     <main className={styles.main}>
@@ -60,7 +71,9 @@ function Home() {
           <p style={{color: "black"}}>Browse, explore and find the right project for you!
           Select your search criteria to view only the projects that interest you or just browse. Post your projects to find other like-minded developers to collaborate with. <br/> Break the boundaries with CurlyBrace!</p>
         </Modal>
+        <p></p>
       </div>
+          {displayResult}
     </main>
   );
 }
