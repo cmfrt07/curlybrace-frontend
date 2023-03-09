@@ -18,7 +18,7 @@ function Location(){
 
 
 const handleSearch= ()=> {
-    fetch(`http://api.positionstack.com/v1/forward?access_key=${API_key}&query=${locationName}&limit=1`)
+    fetch(`http://api.positionstack.com/v1/forward?access_key=2d8531b40e3247ef4cefc88994fd86e0&query=${locationName}&limit=1`)
     .then(response=> response.json())
     .then(data=>{
       setCurrentLocation(data.data[0].name)
