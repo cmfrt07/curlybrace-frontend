@@ -11,6 +11,7 @@
 }
 
 .user {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -169,4 +170,43 @@
 
 .main textarea:focus{
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main button{
+    background-color: #161b22;
+    border: #30363d 1px solid;
+    box-shadow: 1px 1px 5px #30363d;
+    border-radius: 6px;
+    color: white;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .usernameInput {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 0px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    background: #161b22;
+    height: 30px;
+    color: #c9d1d9;
+    margin: 8px;
+  }
 }

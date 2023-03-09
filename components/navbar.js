@@ -2,9 +2,11 @@ import styles from '../styles/Navbar.module.css';
 import React, {useState, useEffect} from "react";
 import { useRouter } from "next/router";
 import SearchProject from './SearchProject';
+import { useSelector } from 'react-redux';
 
 
 function Navbar() {
+
 
   const defaultWidth = "45%";
 
@@ -96,6 +98,26 @@ const handleHome = () => {
   router.push("/");
 }
 
+const resultLength = useSelector((state) => state.search.value.length);
+
+useEffect(() => {
+
+  if(resultLength > 0){
+    setMenuStyle({
+      "borderLeft": "solid 1px #30363d",
+      "width": window.innerWidth < 768 ? "65%" : defaultWidth,
+      "height": "92vh",
+      "backgroundColor": "#161b22",
+      "position": "absolute",
+      "bottom": 0,
+      "right": 0,
+      "zIndex": 1,
+      "display": "none"
+    })
+    setIsMenuClicked(false)
+  }
+
+}, [resultLength])
 
 
   return (
@@ -103,7 +125,7 @@ const handleHome = () => {
       <nav className={styles.navbar}>
       <div className={styles.logoContainer} onClick={() => handleHome()}>
         <h1>&#123; CurlyBrace &#125;</h1>
-        <p>Find projects around the world</p>
+        <p>Explore the world to find projects</p>
       </div>
         <div className={styles.burgerMenu} onClick={updateMenu}>
           <div className={styles.burgerClass}></div>

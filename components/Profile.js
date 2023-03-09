@@ -179,8 +179,7 @@ if (isEditing){
                 <input  className={styles.avatarInput} type="file"  id="avatarFile" onChange={(e) => setAvatarFile(e.target.files[0])} />
 
                 <input className={styles.usernameInput} onChange={(e) => setUsername(e.target.value)} value={username}></input>
-            </div>
-            <div>
+                
                 <button onClick={()=> handleSaveChanges()}> Save changes </button>
             </div>
         </div>
