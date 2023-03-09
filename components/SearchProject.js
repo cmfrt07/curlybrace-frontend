@@ -156,9 +156,18 @@ const handleSubmit = () => {
 
 
 let displayResult = <p></p>;
-if(resultLength > 0){
+if(resultLength !== null){
   displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>🚀 Result: {resultLength}</p>;
+  if(resultLength > 0){
+    displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>🚀 Result: {resultLength}</p>;
+  }else{
+    displayResult = <p style={{fontWeight: "bold", margin: "0px"}}>❌ No result!</p>;
+  }
 }
+
+//cas if 0
+
+//cas if !search
 
 const handleClear = () => {
   dispatch(resetSearch())

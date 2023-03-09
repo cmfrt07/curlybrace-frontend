@@ -36,10 +36,16 @@ function Home() {
   ];
 
   let displayResult = <p></p>
-  if(resultLength > 0){
-    displayResult= <div className={styles.result}>
-    <p>🚀 Result: {resultLength}</p>
-    </div>
+  if(resultLength !== null ){
+    if(resultLength > 0){
+      displayResult= <div className={styles.result}>
+      <p>🚀 Result: {resultLength}</p>
+      </div>
+    }else{
+      displayResult= <div className={styles.result}>
+      <p>❌ No result!</p>
+      </div>
+    }
   }
 
   return (

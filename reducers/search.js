@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: { project: [], isSearching: false, length: 0 },
+  value: { project: [], isSearching: false, length: null },
 };
 
 export const searchSlice = createSlice({
@@ -20,7 +20,7 @@ export const searchSlice = createSlice({
       state.value.length = action.payload.length
     },
     clearLength: (state, action) => {
-      state.value.length = 0
+      state.value.length = null
     },
   },
 });
