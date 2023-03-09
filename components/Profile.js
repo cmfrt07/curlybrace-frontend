@@ -84,8 +84,7 @@ const handleEdit = () => {
     setIsEditing(!isEditing)
 }
 
-//ATTENTION DONN2ES SENSIBLES --->> next.config.js et le mettre dans le gitignore
-//https://nextjs.org/docs/basic-features/environment-variables
+
 const uploadPreset = process.env.NEXT_PUBLIC_UPLOAD_PRESET
 const cloudName = process.env.NEXT_PUBLIC_CLOUD_NAME
 

@@ -138,10 +138,8 @@ if(location.lat === null && checkLocation){
 }
 
 
-//ATTENTION DONN2ES SENSIBLES --->> next.config.js et le mettre dans le gitignore
-//https://nextjs.org/docs/basic-features/environment-variables
-const uploadPreset = 'dk1wakq1'
-const cloudName = 'dyjxi1isx'
+const uploadPreset = process.env.NEXT_PUBLIC_UPLOAD_PRESET
+const cloudName = process.env.NEXT_PUBLIC_CLOUD_NAME
 
   const CreateProject = () => {
     if(title === ''){
