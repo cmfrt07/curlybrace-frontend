@@ -28,7 +28,6 @@ function Contact() {
 
 
   const allMessages = displayMessage.length > 0 ? displayMessage.map((data, i) => {
-
     return <div className={styles.messageBox}>
     <p key={i} className={styles.myMessages} >{data.text}</p>
     <span>{data.time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
@@ -64,7 +63,9 @@ function Contact() {
       <button onClick={()=> handleRetour()}>Go Back</button>
     </div>
       <div className={styles.messages}>
-        {allMessages}
+        <div style={{width: "40%"}}>
+          {allMessages}
+        </div>
       </div>
       <div className={styles.sendMessage}>
       <input placeholder='Message...' onChange={(e) => setMessage(e.target.value)} value={message}></input>
