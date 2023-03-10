@@ -24,8 +24,8 @@ const handleSearch= ()=> {
     console.log(data)
     setCurrentLocation("✅ " + data.name)
       dispatch(newLocation({
-        lat: data.latitude,
-        lon: data.longitude,
+        lat: data.lat,
+        lon: data.lon,
         country: data.country,
         name: data.name,
       }))

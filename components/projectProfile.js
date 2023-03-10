@@ -67,7 +67,7 @@ const projectsOfUser = userProject.length > 0 ? userProject.map((data, i) => {
         </div>
         <div style={{paddingTop: "10px", paddingBottom: "10px"}}>
             <p style={{margin: 0}}>{data.description}</p>
-            <button onClick={() => viewProject(data._id)} style={{marginTop: "40px"}}>ViewProject</button>
+            <button onClick={() => viewProject(data._id)} style={{marginTop: "40px"}}>View Project</button>
         </div>
     </div>;
 }) : null;

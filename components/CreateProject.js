@@ -15,6 +15,7 @@ function CreateProject() {
   const router = useRouter();
   const userToken = useSelector((state) => state.user.value.token);
   const location = useSelector((state) => state.location.value)
+  console.log(location, "hi im the location")
 
   const [title, setTitle] = useState('');
   const [shortDescription, setShortDescription] = useState('');
